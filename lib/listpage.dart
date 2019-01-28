@@ -8,16 +8,16 @@ class ListPage extends StatelessWidget {
         title: Text("List View"),
       ),
       body: Container(
-        child: CircleAvatar(backgroundImage: AssetImage("assets/ishwor"),),
+        
        width: 120,
         height: 120,
-        // decoration: BoxDecoration(
-        //   shape: BoxShape.circle,
-        // image: DecorationImage(
-        //   fit: BoxFit.fill,
-        //   image: AssetImage("assets/ishwor.jpg")
-        // )
-        // ),
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+        image: DecorationImage(
+          fit: BoxFit.fill,
+          image: AssetImage("assets/ishwor.jpg")
+        )
+        ),
 
       ),
     
