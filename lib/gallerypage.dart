@@ -11,8 +11,9 @@ List<Container>GalleryPhotos = List();
 
 
 var photo =[
-  {"name":"Classmate 2075 Sport Week","image":"01.jpg"},
-   {"name":"Ishwor in Action Futsal","image":"02.jpg"},
+  {"name":"Swyambunath 2074","image":"01.jpg"},
+   {"name":"Collegemate","image":"02.jpg"},
+   {"name":"Classmate","image":"03.jpg"},
     
   ];
   

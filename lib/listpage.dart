@@ -8,19 +8,20 @@ class ListPage extends StatelessWidget {
         title: Text("List View"),
       ),
       body: Container(
-        
-       width: 120,
-        height: 120,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-        image: DecorationImage(
-          fit: BoxFit.fill,
-          image: AssetImage("assets/ishwor.jpg")
-        )
+        child: ListView.builder(
+          itemBuilder: (_,int index)=>Eachlist(),
+          itemCount: 10,
         ),
+      )
+    );
+  }
+}
+class Eachlist extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ,
 
-      ),
-    
       
     );
   }
