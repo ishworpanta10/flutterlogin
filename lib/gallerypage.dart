@@ -40,9 +40,19 @@ var photo =[
                 Image.asset("assets/$image",fit: BoxFit.cover,),
                 Padding(padding: EdgeInsets.all(10.0),),
 
-              Text(photos["name"],style:TextStyle(fontSize: 20.0 ),textAlign: TextAlign.center,)
-              
+              Text(photos["name"],style:TextStyle(fontSize: 20.0 ),textAlign: TextAlign.center,),
+              //Raised Button icon
+          //     RaisedButton.icon(
+          //   icon: Icon(Icons.add_a_photo),
+          //   onPressed: (){
+          //     Navigator.push(context, MaterialPageRoute(
+          //       builder: (BuildContext context)=>GalleryPage(),
+          //     ));
+          //   },
+          //   label: Text('Add Photo'),
+          // ),
               ],
+              
             ),
           
           )

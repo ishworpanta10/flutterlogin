@@ -12,19 +12,24 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Welcome"),
       ),
-      body: _buildBody(),
+      body: 
+      
+      _buildBody(context),
       drawer: Drawer(
         elevation: 5.0,
         child: _buildDrawer(context),
+        
       ),
     );
   }
 
-  Widget _buildBody() {
+  Widget _buildBody(BuildContext context) {
     return Container(
+    
       padding: EdgeInsets.all(16.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        
         children: <Widget>[
           Row(
             children: <Widget>[
@@ -40,30 +45,31 @@ class HomePage extends StatelessWidget {
               
             ],
           ),
-          SizedBox(height: 20.0,),
+          SizedBox(height: 15.0,),
           
           Text("This is the home page of this application . ",style: TextStyle(color: Colors.black,fontSize: 20),),
           SizedBox(height: 10.0,),
           RichText(
             text: TextSpan(
-              style: TextStyle(color: Colors.black,fontSize: 20),
+              style: TextStyle(color: Colors.black,fontSize: 15),
               children: [
                 TextSpan(text: "This "),
                 TextSpan(text: "Application LoginDemo ", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
                 TextSpan(text: "is my first mobile applications. I am using flutter to create this application which support for both ios and android user. And it is created with coordination of my group member. Special thanks to "),
                 TextSpan(text: " Miss Sashita Ghimire", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
                 TextSpan(text: " for helping me to build this application .")
-              ]
+              ],
+              
             ),
             textAlign: TextAlign.justify,
           ),
-          SizedBox(height: 20.0,),
-          Text("This is a Drawer Button .",style: TextStyle(color: Colors.black,fontSize: 20),),
-          SizedBox(height: 20.0,),
-          Text("We can use this button to navigate to our drawer directly.",style: TextStyle(color: Colors.black,fontSize: 20),),
-          SizedBox(height: 20.0,),
-          Text("And thank you all for using this application.",style: TextStyle(color: Colors.black,fontSize: 20),),
-          SizedBox(height: 25.0,),
+          SizedBox(height: 15,),
+          // Text("This is a Drawer Button .",style: TextStyle(color: Colors.black,fontSize: 15),),
+          // SizedBox(height: 15.0,),
+          // Text("We can use this button to navigate to our drawer directly.",style: TextStyle(color: Colors.black,fontSize: 15),),
+          // SizedBox(height: 15.0,),
+          // Text("And thank you all for using this application.",style: TextStyle(color: Colors.black,fontSize: 15),),
+          // SizedBox(height: 25.0,),
 
 
 
@@ -75,10 +81,70 @@ class HomePage extends StatelessWidget {
               onPressed: () => Scaffold.of(context).openDrawer(),
             )
           ),
-          
+          //Flat Button
+          FlatButton(
+            color: Colors.green[300],
+            child: Text("Home"),
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context)=>HomePage()
+              ),);
+            },
+          ),
+          //Raised  Button
+           RaisedButton(
+            color: Colors.blueAccent[100],
+            child: Text("Menu"),
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context)=>MenuPage()
+              ),);
+            },
+          ),
+          //material button
+           MaterialButton(
+            color: Colors.blueAccent[100],
+            child: Text("Gallery"),
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context)=>GalleryPage()
+              ),);
+            },
+          ),
+           RaisedButton(
+            shape: BeveledRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0)
+            ),
+            child: Text("List View"),
+            color: Colors.blue,
+            onPressed: (){
+                Navigator.push(context, MaterialPageRoute(
+                builder: (context)=>ListPage()
+              ),);
+            },
+          ),
+              RaisedButton(
+            shape: BeveledRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0)
+            ),
+            child: Text("Profile"),
+            color: Colors.blue,
+            onPressed: (){
+             Navigator.push(context, MaterialPageRoute(
+                builder: (context)=>ProfilePage()
+             ));
+            },
+          ),
+
+       
+
         ],
+        
+      
       ),
+      
     );
+    
   }
 
   Widget _buildDrawer(BuildContext context) {
