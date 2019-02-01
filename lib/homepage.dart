@@ -4,6 +4,7 @@ import 'listpage.dart';
 import 'profilepage.dart';
 import 'menupage.dart';
 import 'favouritepage.dart';
+import 'containerpage.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -203,7 +204,16 @@ class HomePage extends StatelessWidget {
           onLongPress: (){
             print('Gallery is pressed Long');
           },
-        )
+        ),
+
+          ListTile(
+          leading: Icon(Icons.developer_mode),
+          title: Text("Container Demo"),
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder:(BuildContext context)=>ContainerDemo() ));
+          },
+        ),
+
       ],
     );
   }
