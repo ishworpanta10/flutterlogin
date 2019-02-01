@@ -15,10 +15,10 @@ These are some Screenshot of this application.
 ![Gallery Page](/screenshots/Gallery.png?raw=true "Gallery Page Screenshot")
 ![List View](/screenshots/Listview.png?raw=true "List Page Screenshot") -->
 
-<img src="screenshots/Login.png" width="480px" />
-<img src="screenshots/Register.png" width="480x" />
-<img src="screenshots/Home.png" width="480px" />
-<img src="screenshots/Drawer.png" width="480px" />
-<img src="screenshots/Gallery.png" width="480px" />
-<img src="screenshots/Listview.png" width="480px" />
+<img src="screenshots/Login.png" width="480px" /> <img src="screenshots/Register.png" width="480x" />
+
+<img src="screenshots/Home.png" width="480px" /><img src="screenshots/Drawer.png" width="480px" />
+
+<img src="screenshots/Gallery.png" width="480px" /> <img src="screenshots/Listview.png" width="480px" />
+
 <!-- <img src="screenshots/Home.png" width="300px" /> -->
