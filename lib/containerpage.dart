@@ -45,7 +45,7 @@ class ContainerDemo extends StatelessWidget {
             child: Center( 
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 16.0,vertical: 5.0),
-                color: Colors.black87,
+               // color: Colors.black87,
                 child: Text('Container with background image', style: textStyle)
               ),
             ),

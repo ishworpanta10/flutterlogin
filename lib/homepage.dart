@@ -5,6 +5,7 @@ import 'profilepage.dart';
 import 'menupage.dart';
 import 'favouritepage.dart';
 import 'containerpage.dart';
+import 'loginpage.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -83,6 +84,8 @@ class HomePage extends StatelessWidget {
             )
           ),
           //Flat Button
+        Center(
+          child:
           FlatButton(
             color: Colors.green[300],
             child: Text("Home"),
@@ -92,7 +95,10 @@ class HomePage extends StatelessWidget {
               ),);
             },
           ),
+        ),
           //Raised  Button
+          Center(
+            child:
            RaisedButton(
             color: Colors.blueAccent[100],
             child: Text("Menu"),
@@ -102,7 +108,11 @@ class HomePage extends StatelessWidget {
               ),);
             },
           ),
+          ),
+
           //material button
+          Center(
+            child:
            MaterialButton(
             color: Colors.blueAccent[100],
             child: Text("Gallery"),
@@ -112,6 +122,11 @@ class HomePage extends StatelessWidget {
               ),);
             },
           ),
+          ),
+
+          Center(
+            child:
+          
            RaisedButton(
             shape: BeveledRectangleBorder(
               borderRadius: BorderRadius.circular(10.0)
@@ -123,7 +138,10 @@ class HomePage extends StatelessWidget {
                 builder: (context)=>ListPage()
               ),);
             },
+          ), 
           ),
+            Center(
+              child: 
               RaisedButton(
             shape: BeveledRectangleBorder(
               borderRadius: BorderRadius.circular(10.0)
@@ -136,6 +154,21 @@ class HomePage extends StatelessWidget {
              ));
             },
           ),
+            ),
+
+
+            //Logout Button
+            RaisedButton(
+              shape: RoundedRectangleBorder(
+                borderRadius:BorderRadius.circular(10)
+              ),
+              child: Text("Logout"),
+              color: Colors.red ,
+              onPressed:(){ Navigator.push(context, MaterialPageRoute(
+                builder:(context)=>LoginPage()
+                ));
+              }
+               )
 
        
 
@@ -151,12 +184,31 @@ class HomePage extends StatelessWidget {
   Widget _buildDrawer(BuildContext context) {
     return ListView(
       children: <Widget>[
-        DrawerHeader(
-          decoration: BoxDecoration(
-            color: Colors.green
-          ),
-          child: Text("Menu Items",style: TextStyle(fontSize: 30,color: Colors.black),),
-        ),//SizedBox(height: 30,),
+        // DrawerHeader(
+        //   decoration: BoxDecoration(
+        //     color: Colors.green
+        //   ),
+        //   child: Text("Menu Items",style: TextStyle(fontSize: 30,color: Colors.black),),
+        // ),SizedBox(height: 30,),
+
+          UserAccountsDrawerHeader(
+            accountName: Text("Ishwor Panta"),
+            accountEmail: Text("ishworpanta10@gmail.com"),
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.fill,
+                image: AssetImage("assets/login_back.jpg"),
+                
+              ),
+               
+            ),
+            currentAccountPicture: GestureDetector(
+              onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context)=>ProfilePage())),
+              child: CircleAvatar(backgroundImage: AssetImage("assets/ishwor.jpg"),),
+            ),
+            
+             ),
+
         ListTile(
           leading: Icon(Icons.home),
           title: Text("Home"),
